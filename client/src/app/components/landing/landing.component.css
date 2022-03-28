@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1 {
+  padding: 1rem;
+  margin: 3rem auto;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 2rem;
+  outline: none;
+  background-color: #ddebf7;
+  border-radius: 10px;
+  width: fit-content;
+  border: 1px solid #afafaf;
+}
+
+p {
+  width: 80%;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}

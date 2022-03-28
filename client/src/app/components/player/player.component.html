@@ -1,0 +1,13 @@
+<div class="player-container">
+  <h5>Please type your name:</h5>
+  <form class="form-container">
+    <input
+      type="text"
+      name="player-name"
+      [(ngModel)]="playerName"
+      autofocus
+      autocomplete="off"
+    />
+    <a routerLink="/main-game/{{ playerName }}">Start</a>
+  </form>
+</div>

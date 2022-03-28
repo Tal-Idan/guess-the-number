@@ -1,0 +1,33 @@
+<div class="scores-container">
+  <h1>High Scores</h1>
+  <table>
+    <thead>
+      <tr>
+        <th><h4>Rank</h4></th>
+        <th><h4>Name</h4></th>
+        <th><h4>Guesses</h4></th>
+        <th><h4>Time to Complete</h4></th>
+        <th class="final-score"><h4>Final Score</h4></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let score of scores; index as i">
+        <td>
+          <h5>{{ i + 1 }}</h5>
+        </td>
+        <td>
+          <h5>{{ score.name }}</h5>
+        </td>
+        <td>
+          <h5>{{ score.attempts }}</h5>
+        </td>
+        <td>
+          <h5>{{ score.timeToComplete / 1000 }} Seconds</h5>
+        </td>
+        <td class="final-score">
+          <h5>{{ score.finalScore }}</h5>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

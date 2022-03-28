@@ -1,0 +1,40 @@
+
+<div class="guess-container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="guess-form-control">
+      <h3>{{playerName}}, Input your guess</h3>
+      <div>
+        <input
+          class="guess-input"
+          type="text"
+          name="guess"
+          id="guess"
+          [(ngModel)]="guessedNumber"
+          autocomplete="off"
+          autofocus
+          maxlength="4"
+        />
+        <input
+          class="guess-button"
+          type="submit"
+          value="Check"
+          [disabled]="guessedNumber.length < 4"
+        />
+      </div>
+    </div>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Your Guess</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of results">
+        <td>{{ item.attempt }}</td>
+        <td>{{ item.result }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
