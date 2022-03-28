@@ -56,6 +56,13 @@ tbody > tr > td {
   text-align: center;
 }
 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .guess-container {
+    padding: 1rem;
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .guess-container {
     padding: 1rem;

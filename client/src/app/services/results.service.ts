@@ -14,7 +14,7 @@ const httpOptions = {
 })
 
 export class ResultsService {
-  private apiUrl = 'http://164.90.220.29:5000/api/v1/users'
+  private apiUrl = 'https://num-guess-srv.herokuapp.com/api/v1/users'
 
   constructor(private http: HttpClient) { }
 

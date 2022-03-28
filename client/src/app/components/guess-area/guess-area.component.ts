@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {NgToastService} from 'ng-angular-popup';
 import {ActivatedRoute, Router} from '@angular/router'
 
-import * as moment from 'moment';
-
 @Component({
   selector: 'app-guess-area',
   templateUrl: './guess-area.component.html',
@@ -88,7 +86,6 @@ export class GuessAreaComponent implements OnInit {
       }
       this.guesses++;
       this.results.push({attempt: guess, result: this.result})
-      console.log(this.results);
     }
   }
 }

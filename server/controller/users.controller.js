@@ -4,7 +4,7 @@ export default class UsersController {
 	static async getAllUsers(req, res, next) {
 		try {
 			let users = await UsersDAO.getUsers();
-			res.json(users);
+			res.status(200).json(users);
 		} catch (error) {
 			console.log(`api, ${err}`);
 			res.status(500).json({ error: err });
@@ -16,7 +16,7 @@ export default class UsersController {
 			const { name, attempts, timeToComplete } = req.body;
 			const today = new Date();
 			await UsersDAO.saveGameResults(name, attempts, timeToComplete, today);
-			res.json({ status: 'success' });
+			res.status(200).json({ status: 'success' });
 		} catch (error) {
 			res.status(500).json({ error: error.message });
 		}
